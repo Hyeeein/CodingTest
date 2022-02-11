@@ -17,3 +17,54 @@ for i in range(A-1, B):
     sum += sequence[i]
 
 print(sum)
+
+
+
+### ----------------------
+### 지영님
+
+# import sys
+
+# ## 함수 선언부
+
+# def numbers(a,b):
+#     numbers_list = []
+#     for i in range(1,46): #수열 범위 지정 어떻게 ? while?
+#         for j in range(1,i+1):
+#             # print(i)
+#             numbers_list.append(i)
+#     return sum(numbers_list[a-1:b])
+
+#         # 1 = 1
+#         # 2 = 2 2
+#         # 3 = 3 3 3
+#         # 별찍기 ?
+
+# ## 전역 변수부
+
+# a,b=map(int,sys.stdin.readline().split())
+# # print(N)
+
+# ## 메인 코드
+
+# print(numbers(a,b))
+
+
+
+### ----------------------
+### 정윤님
+
+# try:
+#     N = int(input())
+#     a = [i for i in map(int, input().split())]
+#     if len(a) != N:
+#         raise Exception("숫자의 개수를 확인해 주세요!")
+#     prime_num = 0
+#     for i in a:
+#         b = [j for j in range(1, i + 1) if i % j == 0]
+#         if len(b) == 2:
+#             prime_num += 1
+#     print(prime_num)
+
+# except Exception as e:
+#     print(e)
