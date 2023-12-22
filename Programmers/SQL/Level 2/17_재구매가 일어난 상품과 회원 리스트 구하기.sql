@@ -1,0 +1,12 @@
+-- 1) DB에서 USER_ID와 PRODUCT_ID를 불러옴
+SELECT USER_ID, PRODUCT_ID
+FROM ONLINE_SALE
+
+-- 2) USER_ID, PRODUCT_ID를 그룹화하여 동일한 회원과 상품을 묶음
+GROUP BY USER_ID, PRODUCT_ID
+
+-- 3) 그룹화 한 것들이 2개 이상이면 재구매에 해당
+HAVING COUNT(*) >= 2
+
+-- 4) 마지막으로 정렬
+ORDER BY USER_ID ASC, PRODUCT_ID DESC;
